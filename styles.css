@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content horizontally */
+  overflow: hidden; /* Prevent overflow that can cause scrolling */
 }
 
 h1 {
@@ -31,6 +32,7 @@ h1 {
   max-width: 1200px;
   margin: 0 auto; /* Centering the container */
   padding: 1rem; /* Added padding for better spacing */
+  overflow: hidden; /* Ensure it doesn’t overflow */
 }
 
 .image-1,
