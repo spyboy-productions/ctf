@@ -9,7 +9,7 @@
 }
 
 body {
-  padding: 2rem;
+  padding: 1rem; /* Reduced padding for smaller screens */
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(to right bottom, #50D5B7, #067D68);
@@ -17,21 +17,10 @@ body {
   flex-direction: column;
 }
 
-.header-img {
-  display: flex;
-  width: 100%;
-  max-width: 600px;
-  margin-inline: auto;
-  filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.2));
-}
-
 h1 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 1.5rem; /* Responsive font size */
   text-align: center;
-
+  margin-bottom: 2rem; /* Added margin for spacing */
 }
 
 .container {
@@ -41,6 +30,7 @@ h1 {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
+  padding: 1rem; /* Added padding for better spacing */
 }
 
 .image-1,
@@ -52,20 +42,20 @@ h1 {
   height: auto; /* Adjust height as needed */
 }
 
-.image-1 {
-  width: 500px;
-}
-
+.image-1,
 .image-2 {
-  width: 500px;
+  width: 80%; /* Use percentage for responsive width */
+  max-width: 500px; /* Maintain max width for larger screens */
 }
 
 .btn {
   position: absolute;
-  top: calc(100% - 5rem);
+  bottom: 1rem; /* Changed to use bottom instead of calc for simplicity */
+  left: 50%;
+  transform: translateX(-50%);
   min-width: 120px;
   padding: 0.75rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem; /* Responsive font size */
   outline: none;
   border: none;
   background-color: #f8fafc;
@@ -87,9 +77,23 @@ h1 {
 }
 
 .btn-no {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   transition: all 0.5s ease;
   z-index: 1;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.25rem; /* Smaller font size for smaller screens */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 0.5rem 0.75rem; /* Reduced padding */
+  }
+
+  .image-1,
+  .image-2 {
+    width: 90%; /* Increased width for mobile */
+  }
 }
