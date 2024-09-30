@@ -51,7 +51,8 @@ h1 {
   bottom: 1rem; /* Place button at the bottom */
   left: 50%;
   transform: translateX(-50%); /* Center the button */
-  min-width: 120px;
+  min-width: 120px; /* Minimum width */
+  max-width: 200px; /* Maximum width to prevent stretching */
   padding: 0.75rem 1rem;
   font-size: 1.25rem; /* Responsive font size */
   outline: none;
@@ -61,7 +62,11 @@ h1 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s; /* Smooth transitions */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis if text is too long */
 }
+
 
 .btn:hover {
   background-color: #e2e8f0;
