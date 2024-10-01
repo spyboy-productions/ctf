@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" href="https://0.gravatar.com/avatar/fb88310c128924b640be4f69316688155835aac425e8aaa1b720ff818d7e040b" type="image/png">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Spyboy CTF">
+        <meta name="og:description" content="spyboy server access ctf">
+        <meta property="og:image" content="https://cdn.discordapp.com/avatars/877644741339144244/bcb8e0ac84d5042181f1baf34189b797.png?size=1024">
+        <meta property="og:site_name" content="Spyboy" />
+        
+    </head> 
+    <body>
+        <div class="container">
+
+            <div class="gif_container">
+                <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Get Flag</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">I Give Up</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
